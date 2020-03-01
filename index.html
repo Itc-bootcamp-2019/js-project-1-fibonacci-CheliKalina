@@ -4,24 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone 2</title>
+    <title>Milestone 3</title>
 </head>
 
 <body>
 
-    <h1>The Fibonacci of <span id="x"></span> is <span id="y"></span></h1>
+    <h1>The Fibonacci of <span id="x"></span> is <span id="fx"></span></h1>
 
 
     <script>
 
-        let x = 0;
-        let y = 1;
 
-        document.getElementById('x').innerHTML = "x"
-        document.getElementById('y').innerHTML = "y"
+        let fx;
+        let f1 = 0;
+        let f2 = 1;
 
-    
 
+        function fibonacci(x) {
+            if (x === 0) {
+                fx = 0
+            } else if (x === 1) {
+                fx = 1
+            } else {
+                for (let i = 0; i < x; i++) {
+                    fx = f1 + f2;
+                    f1 = f2;
+                    f2 = fx;
+                }
+            }
+        document.getElementById('x').innerText = x
+        document.getElementById('fx').innerText = fx
+        }
+
+        fibonacci(8);
     </script>
 </body>
 
