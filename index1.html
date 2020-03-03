@@ -9,27 +9,53 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Milestone 4</title>
     <style>
-        body{
+        body {
             margin: 20px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            color: #373A3C;
         }
+
         #button-addon2 {
-            background-color: blue;
             color: white;
             font-size: 14px;
+            border-radius: 3px;
+            background: #0275D8;
+        }
+
+        h1 {
+            font-size: 72px;
+            line-height: 79px;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 40px;
+
+        }
+
+        input {
+            border-radius: 3px;
+            border: 1px solid lightgrey;
+            padding: 5px;
+            width: 70px;
+            margin-right: 10px;
         }
 
         h3 {
-            color: blue;
-            font-size: 20px;
-            margin: 10px;
+            font-size: 24px;
+            line-height: 24px;
+            display: flex;
+            align-items: flex-end;
+            margin-right: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div class="input-group mb-3 flex">
+    <h1>Fibonacci Calculator</h1>
+    <div class="input-group mb-3">
         <h3>The Fibonacci of </h3>
-        <input id="userInput" onfocus="this.value=''" type="number" placeholder="Enter a number" aria-label="Enter a number"
+        <input id="userInput" type="number" placeholder="#" aria-label="Enter a number"
             aria-describedby="button-addon2" />
         <div class="input-group-append">
             <button onclick="fibonacci()" class="btn btn-outline-secondary" type="button" id="button-addon2">is</button>
@@ -39,22 +65,31 @@
     </div>
     <script>
 
-        let fx;
-        let f1 = 0;
-        let f2 = 1;
-        let userInput = document.getElementById('userInput');
 
         function fibonacci() {
-            for (let i = 0; i < userInput.value; i++) {
-                fx = f1 + f2;
-                f1 = f2;
-                f2 = fx;
-            }
-            console.log(userInput.value)
-            console.log(fx)
-            document.getElementById('fx').innerText = fx
-        }
 
+            let fx;
+            let f1 = 1;
+            let f2 = 0;
+
+            let userInput = document.getElementById('userInput').value;
+
+            if (parseInt(userInput) === 0) {
+                document.getElementById('fx').innerText = 0
+            } else if (parseInt(userInput) === 1) {
+                document.getElementById('fx').innerText = 1
+            } else {
+                for (let i = 2; i <= parseInt(userInput); i++) {
+                    fx = f1 + f2;
+                    f2 = f1;
+                    f1 = fx;
+                }
+                
+                console.log(fx)
+                document.getElementById('fx').innerText = fx
+            
+            }
+        }
 
     </script>
 
