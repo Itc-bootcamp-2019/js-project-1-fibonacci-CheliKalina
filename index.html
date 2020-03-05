@@ -4,40 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Milestone 6</title>
+
 </head>
 
 <body>
+    <h1>Fibonacci Calculator</h1>
+    <div class="input-group flex">
+        <h3>The Fibonacci Of </h3>
+        <input id="userInput" onfocus="this.value=''" type="number" placeholder="#"
+            aria-label="Enter a number" aria-describedby="button-addon2" />
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">is</button>
+        </div>
 
-    <h1>The Fibonacci of <span id="x"></span> is <span id="fx"></span></h1>
+        <div id = "wrapper">
+            <div class="" role="status"> 
+                <span class="sr-only">Loading...</span></div>
+        </div>
 
-
-    <script>
-
-
-        let fx;
-        let f1 = 0;
-        let f2 = 1;
-
-
-        function fibonacci(x) {
-            if (x === 0) {
-                fx = 0
-            } else if (x === 1) {
-                fx = 1
-            } else {
-                for (let i = 0; i < x; i++) {
-                    fx = f1 + f2;
-                    f1 = f2;
-                    f2 = fx;
-                }
-            }
-        document.getElementById('x').innerText = x
-        document.getElementById('fx').innerText = fx
-        }
-
-        fibonacci(8);
-    </script>
+        <h3 id="serverResult"></h3>
+    </div>
+        <p id="serverError"></p>
+        
+    
+        <script type="text/javascript" src="js/script.js"></script>
+    
 </body>
 
 </html>
