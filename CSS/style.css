@@ -63,7 +63,7 @@ h3 {
 
 #serverResult {
     text-decoration: underline;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 h4 {
@@ -80,20 +80,20 @@ h4 {
 h2 {
     margin-right: 10px;
     font-size: 54px;
+    margin-top: 40px;
 }
 
-li{
+li {
     list-style-type: none;
-    width:48%;
-
+    width: 48%;
 }
+
 .underlineResults {
     border-bottom: 1px solid black;
     padding-bottom: 10px;
     margin-bottom: 10px;
     list-style-type: none;
     margin-top: 30px;
-
 }
 
 ol {
@@ -117,28 +117,89 @@ p {
 
 .wrapper2 {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    margin-top: 40px;
 }
 
 .bold {
     font-weight: bold;
-    display:inline-block;
-    margin-left:5px;
-
+    display: inline-block;
+    margin-left: 5px;
 }
+
 .inline {
-    display:inline-block;
-    margin-left:5px;
+    display: inline-block;
+    margin-left: 5px;
 }
 
-#saveCalc{
+#saveCalc {
     width: 20px;
 }
 
 .hide {
-    display:none;
+    display: none;
 }
-p{
+
+p {
     margin: 0px;
-    padding:0px;
+    padding: 0px;
 }
+
+i {
+    padding-right: 15px;
+
+}
+
+.dropbtn {
+    cursor: pointer;
+    width: 122px;
+    height: 38px;
+    background: #E6E6E6;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: justify;
+    padding-left: 15px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+
+
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 4px;
+
+  }
+  
